@@ -3,7 +3,7 @@
 
 
 library(tidyverse)
-setwd("datasets/gop_frags/") # wig
+setwd("datasets/gop_frags/")
 files <- list.files()
 data <- map(files,function(x) read_csv(x))
 gop_data <- map2(files,data, function(x,y) cbind(x,y))
